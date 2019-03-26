@@ -3,23 +3,19 @@
 
 namespace CarClass
 {
-    class Program
+    
+    public class Car
     {
-
-        static void Main(string[] args)
+        public Car()
         {
-            Car car = new Car();
+           
             Random random = new Random();
             double min = 0.0;
             double max = 13.0;
-            car.GasLevel = min + random.NextDouble() * (max - min);
-             //random.NextDouble(0.0, 13.0) * 0.0;
-
+            GasLevel = min + random.NextDouble() * (max - min);
+            //random.NextDouble(0.0, 13.0) * 0.0;
         }
-    }
-    class Car
-    {
-        
+
         public double GasLevel { get; set; }
 
 
@@ -41,10 +37,14 @@ namespace CarClass
         }
 
 
+    }
+    class Program
+    {
 
 
-
-
-
+        static void Main(string[] args)
+        {
+            Car car = new Car();
+        }
     }
 }
